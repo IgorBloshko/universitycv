@@ -3,30 +3,30 @@ package Build;
 import java.util.Objects;
 
 public class Building {
-     public String universityFaculty;
-     public String universityChair;
+    private String universityFaculty;
+    private String universityChair;
 
-    public Building (String universityFaculty, String universityChair) {
+    public Building(String universityFaculty, String universityChair) {
 
         this.universityFaculty = universityFaculty;
         this.universityChair = universityChair;
     }
 
-       public String getUniversityFaculty () {
-            return universityFaculty;
-        }
+    public String getUniversityFaculty() {
+        return universityFaculty;
+    }
 
-        public void setUniversityFaculty (String UniversityFaculty) {
-            this.universityFaculty = universityFaculty;
-        }
+    public void setUniversityFaculty(String UniversityFaculty) {
+        this.universityFaculty = universityFaculty;
+    }
 
-       public String getUniversityChair () {
-            return universityChair;
-        }
+    public String getUniversityChair() {
+        return universityChair;
+    }
 
-        public void setUniversityChair () {
-            this.universityChair = universityChair;
-        }
+    public void setUniversityChair() {
+        this.universityChair = universityChair;
+    }
 
     @Override
     public String toString() {

@@ -3,22 +3,22 @@ package Educations;
 import java.util.Objects;
 
 public class Course {
-        String courseNumber;
-        String faculty;
-        int subjects;
+    private String courseNumber;
+    private String faculty;
+    private int subjects;
 
-    public Course (String courseNumber, String faculty, int subjects) {
+    public Course(String courseNumber, String faculty, int subjects) {
 
         this.courseNumber = courseNumber;
         this.faculty = faculty;
         this.subjects = subjects;
     }
 
-    public String getCourseNumber () {
+    public String getCourseNumber() {
         return courseNumber;
     }
 
-    public void setCourseNumber (String courseNumber) {
+    public void setCourseNumber(String courseNumber) {
         this.courseNumber = courseNumber;
     }
 
@@ -26,7 +26,7 @@ public class Course {
         return faculty;
     }
 
-    public void setDepartment (String department) {
+    public void setDepartment(String department) {
         this.faculty = department;
     }
 
@@ -34,9 +34,8 @@ public class Course {
         return subjects;
     }
 
-    public void setSubjects (int subjects) {
+    public void setSubjects(int subjects) {
         this.subjects = subjects;
-
 
     }
 

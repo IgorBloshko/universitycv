@@ -6,11 +6,11 @@ public class Group {
     private int groupNumber;
     private int studentsGroup;
 
-       public Group (int groupNumber, int studentsGroup) {
+    public Group(int groupNumber, int studentsGroup) {
 
-           this.setGroupNumber(groupNumber);
-           this.studentsGroup = studentsGroup;
-       }
+        this.setGroupNumber(groupNumber);
+        this.studentsGroup = studentsGroup;
+    }
 
     public int getGroupNumber() {
         return groupNumber;

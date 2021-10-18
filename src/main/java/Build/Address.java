@@ -3,9 +3,9 @@ package Build;
 import java.util.Objects;
 
 public class Address {
-    public int numberBuild;
-    public String street;
-    public int addressNumber;
+    private int numberBuild;
+    private String street;
+    private int addressNumber;
 
     public Address(int numberBuild, String street, int addressNumber) {
 

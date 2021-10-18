@@ -4,27 +4,30 @@ import Educations.Course;
 import Educations.Subject;
 import Person.Student;
 import Person.Teacher;
-
+import Utils.TeacherUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Main {
-    public static void main(String[] arg) {
-        //ArrayList<Student> students = new ArrayList<>();
-        Course c = new Course("first", "History", 21);
-        Student s1 = new Student("Alex", "Pronto", 17, "entrant", c);
-        Teacher t2 = new Teacher("Antony", "Hopkins", 44, "high", "male", 12);
-        Teacher t3 = new Teacher("Brad", "Pitt", 51, "high", "male", 16);
-        Teacher t4 = new Teacher("Amanda", "Bremor", 48, "high", "female", 8);
-        Teacher t5 = new Teacher("Jack", "London", 62, "high", "male", 24);
-        Teacher t1 = new Teacher("John", "Doe", 40, "high", "female", 8);
-        Subject sub1 = new Subject("biology", 76);
-        Subject sub2 = new Subject("physics", 64);
-        Subject sub3 = new Subject("english", 70);
-        Subject sub4 = new Subject("chemistry", 52);
-        Subject sub5 = new Subject("mathematics", 70);
+    private static final Logger Logger = LogManager.getLogger(Main.class);
 
-        s1.resultExam(sub1);
-        t1.estimateExam(s1);
+    public static void main(String[] arg) {
+//
+//        LOGGER.info("Info message");
+//        LOGGER.warn("Info message");
+//        LOGGER.error("asaasa");
+        //Student s1 = new Student();
+        Teacher t1 = (Teacher) TeacherUtil.createTeacherList().get(0);
+        Teacher t2 = (Teacher) TeacherUtil.createTeacherList().get(1);
+        Teacher t3 = (Teacher) TeacherUtil.createTeacherList().get(2);
+        Teacher t4 = (Teacher) TeacherUtil.createTeacherList().get(3);
+        Teacher t5 = (Teacher) TeacherUtil.createTeacherList().get(4);
+
+
+       // s1.resultExam(sub1);
+       // t1.estimateExam(s1);
         {
             Random estimateExam1 = new Random();
             int estimate1 = estimateExam1.nextInt(6);
@@ -126,6 +129,6 @@ public class Main {
 //            }
 //
 //        }
-
+//Course c = new Course("first", "History", 21);
 
 // sum ()
