@@ -3,23 +3,23 @@ package Build;
 import java.util.Objects;
 
 public class Address {
-    private int numberBuild;
+    private int BuildingNumber;
     private String street;
     private int addressNumber;
 
-    public Address(int numberBuild, String street, int addressNumber) {
+    public Address(int BuildingNumber, String street, int addressNumber) {
 
-        this.numberBuild = numberBuild;
+        this.BuildingNumber = BuildingNumber;
         this.street = street;
         this.addressNumber = addressNumber;
     }
 
     public int getNumberBuild() {
-        return numberBuild;
+        return BuildingNumber;
     }
 
-    public void setNumberBuild(int numberBuild) {
-        this.numberBuild = numberBuild;
+    public void setNumberBuild(int BuildingNumber) {
+        this.BuildingNumber = BuildingNumber;
     }
 
     public String getStreet() {
@@ -41,7 +41,7 @@ public class Address {
     @Override
     public String toString() {
         return "Address{" +
-                "numberBuild=" + numberBuild +
+                "numberBuild=" + BuildingNumber +
                 ", street='" + street + '\'' +
                 ", addressNumber=" + addressNumber +
                 '}';
@@ -52,11 +52,11 @@ public class Address {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Address address = (Address) o;
-        return numberBuild == address.numberBuild && addressNumber == address.addressNumber && Objects.equals(street, address.street);
+        return BuildingNumber == address.BuildingNumber && addressNumber == address.addressNumber && Objects.equals(street, address.street);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(numberBuild, street, addressNumber);
+        return Objects.hash(BuildingNumber, street, addressNumber);
     }
 }

@@ -74,5 +74,6 @@ public abstract class Person {
     @Override
     public int hashCode() {
         return Objects.hash(firstName, lastName, age, education);
+
     }
 }

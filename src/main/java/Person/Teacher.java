@@ -10,7 +10,8 @@ public class Teacher extends Person {
         super(firstName, lastName, age, education);
         this.gender = gender;
         this.experienceYear = experienceYear;
-
+        this.resultExam = resultExam;
+        this.estimateExam = estimateExam;
     }
 
     public int getExperienceYear() {
@@ -48,6 +49,7 @@ public class Teacher extends Person {
     public void setEstimateExam(int estimateExam) {
         this.estimateExam = estimateExam;
     }
+
 }
 
 

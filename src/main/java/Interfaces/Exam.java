@@ -1,5 +1,6 @@
-package Educations;
+package Interfaces;
 
 public interface Exam {
     void passedExam();
+
 }

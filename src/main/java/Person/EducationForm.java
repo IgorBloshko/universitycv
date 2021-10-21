@@ -6,7 +6,7 @@ public class EducationForm {
     private String form;
     private String education;
 
-    EducationForm(String form, String education) {
+    EducationForm (String form, String education) {
         this.setForm(form);
         this.setEducation(education);
     }
