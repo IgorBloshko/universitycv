@@ -14,7 +14,7 @@ com\company\person\EducationForm.class
 com\company\Main.class
 com\company\build\Address.class
 com\company\build\Floor.class
+com\company\exceptions\Estimate.class
 com\company\person\Teacher.class
 com\company\interfaces\GiveLecture.class
 com\company\educations\Exam.class
-com\company\exceptions\EstimateException.class

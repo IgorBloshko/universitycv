@@ -1,5 +1,4 @@
 package com.company;
-
 import com.company.educations.Course;
 import com.company.educations.Exam;
 import com.company.educations.Subject;
@@ -8,7 +7,6 @@ import com.company.person.Teacher;
 import com.company.utils.StudentUtil;
 import com.company.utils.SubjectUtil;
 import com.company.utils.TeacherUtil;
-import org.apache.commons.lang3.RandomUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -17,10 +15,6 @@ public class Main {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
     public static void main(String[] arg) {
-        // LOGGER.info("Info message");
-        // LOGGER.warn("Warn message");
-        // LOGGER.error("Error");
-
 
         Teacher teacher1 = TeacherUtil.createTeacherList().get(0);
         Student student = StudentUtil.createStudentList().get(0);
@@ -35,35 +29,24 @@ public class Main {
         Subject subject5 = SubjectUtil.createSubjectList().get(4);
 
 
-        Exam.examination(student, teacher1, subject1);
-        Exam.examination(student, teacher2, subject2);
-        Exam.examination(student, teacher3, subject3);
-        Exam.examination(student, teacher4, subject4);
-        Exam.examination(student, teacher5, subject5);
+        Exam exam1 = new Exam(student, teacher1, subject1);
+        Exam exam2 = new Exam(student, teacher2, subject2);
+        Exam exam3 = new Exam(student, teacher3, subject3);
+        Exam exam4 = new Exam(student, teacher4, subject4);
+        Exam exam5 = new Exam(student, teacher5, subject5);
 
-        Exam.estimateExam(student, subject1, subject2, subject3, subject4, subject5);
+        int score1 = exam1.scoreExam();
+        int score2 = exam2.scoreExam();
+        int score3 = exam3.scoreExam();
+        int score4 = exam4.scoreExam();
+        int score5 = exam5.scoreExam();
 
-        RandomUtils.nextInt(0, 6);
-
-        String name = Course.FIRST.getName();
-        LOGGER.info(name);
-        LOGGER.info(student);
-        LOGGER.error(" Exam is failed ");
+        final int AVG = (score1 + score2 + score3 + score4 + score5) / 5;
+        LOGGER.error(" Student get an avg " + AVG + " score for 5 subjects " );
 
 
+    }
 
-//
-//        LOGGER.info("Info message");
-//        LOGGER.warn("Info message");
-//        LOGGER.error("asaasa");
-
-//         public Teacher(int estimateExam) throws IllegalArgumentException {
-//            super(estimateExam);
-//            if (estimateExam == 0 || estimateExam == 1 || estimateExam == 2) {
-//                throw new IllegalArgumentException("The estimate should be more than 3");
-//            } else {
-//                this.estimateExam = estimateExam;
-//            }
-//
+}
 
 
