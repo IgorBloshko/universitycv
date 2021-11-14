@@ -32,22 +32,22 @@ public class Exam {
         boolean exams = false;
         int estimate = RandomUtils.nextInt(0, 6);
         while (!exams && tried > 0 || estimate > 3) {
-           student.passedExam(subject);
+            student.passedExam(subject);
             //LOGGER.info( student + " passed exam with " + subject + " and get score " + estimate);
             exams = teacher.estimateExam(student);
             //LOGGER.info(" Teacher gives an estimate " + subject);
             tried--;
-                 }
+        }
         if (estimate == 0 || estimate == 1 || estimate == 2) {
             throw new IllegalArgumentException(" The estimate should be more than 2 ");
 
         } else {
             student.failedExam(subject);
-           LOGGER.info(" Retake! Student failed exam with " + subject);
+            //LOGGER.info(" Retake! Student failed exam with " + subject);
             this.estimate = estimate;
             return estimate;
         }
 
     }
-}
 
+}

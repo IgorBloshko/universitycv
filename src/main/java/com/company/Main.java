@@ -10,24 +10,49 @@ import com.company.utils.TeacherUtil;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
+import static com.company.utils.StudentUtil.createStudentList;
+import static com.company.utils.TeacherUtil.createTeacherList;
+
 
 public class Main {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
     public static void main(String[] arg) {
 
-        Teacher teacher1 = TeacherUtil.createTeacherList().get(0);
-        Student student = StudentUtil.createStudentList().get(0);
+        Teacher teacher1 = createTeacherList().get(0);
+        Student student = createStudentList().get(0);
         Subject subject1 = SubjectUtil.createSubjectList().get(0);
-        Teacher teacher2 = TeacherUtil.createTeacherList().get(1);
+        Teacher teacher2 = createTeacherList().get(1);
         Subject subject2 = SubjectUtil.createSubjectList().get(1);
-        Teacher teacher3 = TeacherUtil.createTeacherList().get(2);
+        Teacher teacher3 = createTeacherList().get(2);
         Subject subject3 = SubjectUtil.createSubjectList().get(2);
-        Teacher teacher4 = TeacherUtil.createTeacherList().get(3);
+        Teacher teacher4 = createTeacherList().get(3);
         Subject subject4 = SubjectUtil.createSubjectList().get(3);
-        Teacher teacher5 = TeacherUtil.createTeacherList().get(4);
+        Teacher teacher5 = createTeacherList().get(4);
         Subject subject5 = SubjectUtil.createSubjectList().get(4);
 
+           {
+            createStudentList()
+                    .stream()
+                    .filter(n->n.getAge()==18)
+                    .forEach(LOGGER::info);
+        }
+
+        {
+            createTeacherList()
+                    .stream()
+                    .filter(n->n.getExperienceYear()>20)
+                    .forEach(LOGGER::info);
+        }
+
+        {
+            createTeacherList()
+                    .stream()
+                    .filter(n->n.getAge()>45)
+                    .map(n-> n.getFirstName())
+                    .sorted()
+                    .forEach(LOGGER::info);
+                }
 
         Exam exam1 = new Exam(student, teacher1, subject1);
         Exam exam2 = new Exam(student, teacher2, subject2);
@@ -42,11 +67,28 @@ public class Main {
         int score5 = exam5.scoreExam();
 
         final int AVG = (score1 + score2 + score3 + score4 + score5) / 5;
+
+
+
         LOGGER.error(" Student get an avg " + AVG + " score for 5 subjects " );
 
 
-    }
+}
 
 }
 
+
+//     {
+//             SubjectUtil.createSubjectList()
+//             .stream()
+//             .filter(n->n.getName())
+//             .map(n-> n.getName())
+//             .sorted()
+//             .forEach(LOGGER::info);
+//             }
+
+//
+//interface IPrinter {
+//
+//    void print(String s);
 
