@@ -53,6 +53,14 @@ public class Main {
                     .sorted()
                     .forEach(LOGGER::info);
                 }
+        {
+            SubjectUtil.createSubjectList()
+                    .stream()
+                    .filter(n->n.getName()=="biology")
+                    .map(n-> n.getName())
+                    .sorted()
+                    .forEach(LOGGER::info);
+        }
 
         Exam exam1 = new Exam(student, teacher1, subject1);
         Exam exam2 = new Exam(student, teacher2, subject2);
@@ -67,28 +75,21 @@ public class Main {
         int score5 = exam5.scoreExam();
 
         final int AVG = (score1 + score2 + score3 + score4 + score5) / 5;
+    if (AVG >= 4) {
+    LOGGER.info(" Student get an avg " + AVG + " score from 5 subjects and get a scholarship. Congratulations!!! ");
+    }
+    else {
+    LOGGER.info(" Student get an avg " + AVG + " score for 5 subjects and not pretend on scholarship" );
+}
 
-
-
-        LOGGER.error(" Student get an avg " + AVG + " score for 5 subjects " );
-
-
+//String verify = "false";
+//    boolean tester = Boolean.parseBoolean(verify);
+//        System.out.println(tester);
+//        double digit = 3.14;
+//        String number = String.valueOf(digit);
+//        System.out.println(number);
 }
 
 }
 
-
-//     {
-//             SubjectUtil.createSubjectList()
-//             .stream()
-//             .filter(n->n.getName())
-//             .map(n-> n.getName())
-//             .sorted()
-//             .forEach(LOGGER::info);
-//             }
-
-//
-//interface IPrinter {
-//
-//    void print(String s);
 

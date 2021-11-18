@@ -1,6 +1,6 @@
 package com.company.interfaces;
 
-public interface GiveLecture {
+public interface IGiveLecture {
     void giveLecture();
 }
 

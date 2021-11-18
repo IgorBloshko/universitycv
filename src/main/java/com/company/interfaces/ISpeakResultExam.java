@@ -1,6 +1,6 @@
 package com.company.interfaces;
 
-public interface SpeakResultExam {
+public interface ISpeakResultExam {
     void speakResultExam();
 
 }
